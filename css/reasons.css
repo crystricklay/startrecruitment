@@ -1,0 +1,84 @@
+/* Общие стили для блока "Почему выбирают ..." */
+#reasonsSection {
+    padding: 60px 20px;
+    background: #f8f8f8; /* светлый фон, можно изменить */
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Заголовок блока */
+#reasonsSection h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #002A87;
+}
+
+/* Стили для списка причин */
+#reasonsList {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+/* Каждый пункт списка */
+.reason-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(45% - 30px); /* два пункта в ряд на десктопе, корректировка отступов */
+    max-width: 500px;
+    opacity: 0;                /* начальное состояние для анимации */
+    transform: translateY(20px); /* небольшое смещение вниз */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* При появлении элемента добавляется класс visible */
+.reason-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для изображения в пункте */
+.reason-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Стили для текста в пункте */
+.reason-text {
+    text-align: center; /* выравнивание текста по левому краю внутри карточки */
+}
+
+.reason-text strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.reason-text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+    #reasonsList {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .reason-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

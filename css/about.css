@@ -1,0 +1,76 @@
+/* 1. Общая секция "О нас" */
+#aboutSection {
+    position: relative;
+    height: 766px;               /* Высота секции — можно изменить по необходимости */
+    overflow: hidden;            /* Скрываем все, что выходит за пределы секции */
+    margin-top: 70px;            /* Отступ сверху (если header фиксированный или занимает место) */
+}
+
+/* 2. Контейнер с фоновым изображением */
+#aboutCover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Путь до изображения прописывается относительно файла about.css.
+       Если about.css лежит в папке css/, то для перехода в папку img нужно использовать "../img/". */
+    background: url('../img/aboutBack.jpg') no-repeat center center;
+    background-size: cover;      /* Растягивает изображение, сохраняя пропорции */
+}
+
+/* 3. Оверлей для затемнения фона */
+#aboutOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 42, 135, 0.4);  /* Полупрозрачный синий оттенок, можно настроить по вкусу */
+    z-index: 1;
+}
+
+/* 4. Контейнер с контентом "О нас" */
+#aboutContent {
+    position: relative;
+    z-index: 2;                /* Выше оверлея */
+    max-width: 800px;          /* Максимальная ширина для читаемости текста */
+    margin: 0 auto;            /* Центрирование по горизонтали */
+    padding: 40px 20px;        /* Внутренние отступы */
+    color: #fff;               /* Цвет шрифта белый для контраста с фоном */
+    text-align: left;          /* Текст выровнен по левому краю */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Заголовок секции "О нас" */
+#aboutContent h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Параграфы и список */
+#aboutContent p,
+#aboutContent ul {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Стили для списка (если необходимо) */
+#aboutContent ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 768px) {
+    #aboutSection {
+        height: 766px;
+    }
+    #aboutContent h2 {
+        font-size: 32px;
+    }
+    #aboutContent p,
+    #aboutContent ul {
+        font-size: 14px;
+
+    }
+}

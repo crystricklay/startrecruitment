@@ -1,0 +1,130 @@
+/* Пример: header.css */
+#siteHeader {
+    position: relative;
+    top: 0;
+    background: #ffffff;
+    z-index: 1;
+    padding: 10px 0 5px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    margin-bottom: 20px;
+}
+
+#logo img {
+    max-width: 220px;
+}
+
+/* Увеличили gap, чтобы увеличить расстояние между элементами меню */
+#mainNav ul {
+    display: flex;
+    gap: 40px; /* ранее было 30px, можно увеличить до 40px, 50px и т.д. */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Уменьшили толщину шрифта до 400 (обычный вес) */
+#mainNav ul li a {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400; /* вместо 500 */
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+/* Ссылки в меню */
+#mainNav ul li a {
+    font-size: 17px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+#mainNav ul li a:hover {
+    color: #002A87;
+    border-bottom: 2px solid #002A87;
+}
+
+/* Бургер-иконка (по умолчанию скрыта на десктопе) */
+#burgerMenu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.burger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* При открытом меню бургер превращается в крестик */
+#burgerMenu.open .burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+#burgerMenu.open .burger-line:nth-child(2) {
+    opacity: 0;
+}
+#burgerMenu.open .burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Медиазапрос для мобильных (ширина до 768px) */
+@media (max-width: 768px) {
+    /* Показываем бургер-иконку, скрываем меню */
+    #burgerMenu {
+        display: block;
+    }
+    #mainNav {
+        display: none;
+        width: 100%;  /* Чтобы занять всю ширину при открытии */
+    }
+
+    /* Когда header в состоянии open (JS добавляет класс) — показываем меню */
+    #siteHeader.open #mainNav {
+        display: flex;
+        flex-wrap: wrap;            /* Нужно для переноса на вторую строку */
+    }
+
+    /* Меню в виде колонки */
+    #mainNav ul {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 10px;
+
+        align-items: center;
+        width: 100%;              /* Выравниваем элементы влево */
+    }
+
+    /* Контейнер шапки переходит в wrap,
+       чтобы логотип и бургер на первой строке,
+       а меню на второй */
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    /* Уменьшаем логотип на мобильном */
+    #logo img {
+        max-width: 150px;
+    }
+}

@@ -1,0 +1,110 @@
+/* Фон и контейнер секции Hero */
+/* Основная секция с отступом сверху, чтобы не заслоняла header */
+#heroSection {
+    margin: -40px; /* отступ, чтобы не перекрывал header */
+    position: relative;
+    height: 766px;               /* высота секции, можно менять по дизайну */
+    overflow: hidden;            /* скрываем все, что выходит за границы секции */
+}
+
+/* Контейнер с фоновым изображением */
+/* Путь до картинки прописывается относительно расположения файла css/hero.css (поднимаемся на уровень выше) */
+#heroCover {
+    padding: 80px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/heroBack.jpg') no-repeat center center;
+    background-size: cover;      /* растягиваем изображение по секции */
+}
+
+/* Оверлей для затемнения фона */
+/* Наложение полупрозрачного слоя для улучшения читаемости текста */
+#heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 42, 135, 0.5); /* полупрозрачный синий оттенок */
+    z-index: 1;                  /* ниже контента */
+}
+
+/* Контейнер для контента секции Hero */
+/* Выравнивание текста по левому краю */
+#heroContent {
+    position: relative;
+    z-index: 2;                  /* выше оверлея */
+    text-align: left;            /* выравнивание текста по левому краю */
+    color: #fff;
+    padding: 0 20px;             /* внутренние отступы */
+    max-width: 800px;            /* максимальная ширина для читаемости */
+    margin: 0 auto;              /* центрирование контейнера по горизонтали */
+}
+
+/* Заголовок секции Hero */
+#heroContent h1 {
+    font-family: 'Inter', sans-serif;  /* шрифт Inter */
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Описание (текст) в секции Hero */
+#heroContent p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+/* Кнопка в секции Hero */
+#heroContent a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #002A87;
+    color: #fff;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+
+    transition: background 0.3s;
+}
+
+/* Ховер-состояние кнопки */
+#heroContent a:hover {
+    background: #001e5c;
+}
+
+/* Адаптивность: корректировка высоты и размеров текста для устройств с шириной экрана до 768px */
+@media screen and (max-width: 768px) {
+
+    #heroCover {/* или вовсе remove parallax */
+        background-position: center top;         /* чтобы было красиво */
+    }
+    #heroSection {
+        height: 600px;
+    }
+    #heroContent h1 {
+        font-size: 32px;
+    }
+    #heroContent p {
+        font-size: 18px;
+    }
+
+    #heroContent a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        background: #002A87;
+        color: #fff;
+        border-radius: 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        transition: background 0.3s;
+    }
+}

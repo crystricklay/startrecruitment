@@ -1,0 +1,50 @@
+.popup-overlay {
+    display: none; /* скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;      /* Центрируем по горизонтали */
+    align-items: center;          /* Центрируем по вертикали */
+    padding: 20px;                /* Добавляем отступ, чтобы на мобильных не обрезалось содержимое */
+    box-sizing: border-box;
+    z-index: 10000;
+}
+
+/* Стили для самого попапа */
+.popup {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.popup h2 {
+    margin-bottom: 20px;
+}
+
+.popup button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.popup button:hover {
+    background: #0056b3;
+}
+
+/* Медиа-запросы для мобильных */
+@media screen and (max-width: 768px) {
+    .popup {
+        padding: 20px;
+    }}

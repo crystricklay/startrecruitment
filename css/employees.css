@@ -1,0 +1,38 @@
+/* employees.css */
+#employeesSection h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+#employeesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.employeeCard {
+    max-width: 220px;
+    text-align: center;
+}
+.employeeCard img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.employeeCard h3 {
+    font-size: 18px;
+}
+
+/* Стили для описательного текста в блоке "Наши сотрудники" */
+.employees-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #333;            /* Можно изменить на другой оттенок по необходимости */
+    text-align: center;     /* Выравнивание по центру, если требуется */
+    max-width: 800px;       /* Максимальная ширина текста */
+    margin: 40px auto;      /* Отступы сверху и снизу, автоподдержка центрирования */
+    line-height: 1.5;       /* Интерлиньяж для лучшей читабельности */
+}

@@ -1,0 +1,106 @@
+/* Секция "Контакты" со светлым фоном */
+#contactsSection {
+    background-color: #f4f6f8;
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Контейнер для двух колонок (контакты + карта) */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: stretch; /* делает колонки одинаковой высоты */
+    flex-wrap: wrap;      /* при нехватке места перенос на новую строку */
+}
+
+/* Левая колонка (контакты) */
+#contactInfo {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;            /* автоматически занимает доступное место */
+    min-width: 300px;   /* минимальная ширина колонки */
+    min-height: 400px;  /* чтобы колонки были не менее 400px высотой */
+    display: flex;      /* чтобы можно было располагать содержимое в столбик */
+    flex-direction: column;
+}
+
+/* Заголовок, список и кнопка внутри левой колонки */
+#contactInfo h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #002A87;
+    text-align: center;
+}
+
+/* Стили списка */
+#contactInfo ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+#contactInfo ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Иконки (телефон, email, лицензия) */
+#contactInfo ul li img {
+    width: 24px;
+    height: auto;
+}
+
+/* Ссылки в блоке контактов */
+#contactInfo ul li a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Кнопка "Написать нам" */
+.contact-button {
+    display: block;
+    background-color: #002A87;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-top: auto; /* прижимаем кнопку к низу, если высота колонки больше */
+}
+
+.contact-button:hover {
+    background-color: #001e5c;
+}
+
+/* Правая колонка (карта) */
+#contactMap {
+    flex: 1;            /* тоже занимает доступное место */
+    min-width: 300px;
+    min-height: 400px;  /* чтобы высота совпадала с левой колонкой */
+    display: flex;      /* чтобы iframe мог растягиваться */
+    flex-direction: column;
+}
+
+/* Стили для карты, растягиваем на всю высоту колонки */
+#contactMap iframe {
+    flex: 1;
+    width: 100%;
+    border: 0;
+}
+
+/* Адаптивность: стэкуем колонки на узких экранах */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

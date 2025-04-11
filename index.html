@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CL EMPLOYMENT LTD</title>
+
+    <!-- Подключаем шрифт Inter из Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Здесь можно подключить внешний файл стилей: <link rel="stylesheet" href="css/styles.css"> -->
+</head>
+<body>
+
+<!-- Popup для обратной связи -->
+<div id="popupOverlay" class="popup-overlay" style="display: none;">
+    <div class="popup">
+        <h2>Обратная связь</h2>
+        <p>
+            Телефон:
+            <a href="tel:+447922152574" style="color: #007BFF;">+44 7922 152574</a>
+        </p>
+        <p>
+            Телеграм:
+            <a href="https://t.me/sergeymalikovv" target="_blank" rel="noopener" style="color: #007BFF;">
+                @sergeymalikovv
+            </a>
+        </p>
+        <button onclick="closePopup()">Закрыть</button>
+    </div>
+</div>
+
+<!-- Header -->
+<header id="siteHeader">
+    <div class="header-container">
+        <div id="logo">
+            <a href="index.html">
+                <img src="img/logo1.png" alt="CL EMPLOYMENT LTD Logo">
+            </a>
+        </div>
+
+        <!-- Бургер-иконка для мобильных -->
+        <button id="burgerMenu" aria-label="Открыть меню">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+        <!-- Навигационное меню -->
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#aboutSection">О нас</a></li>
+                <li><a href="#servicesSection">Услуги</a></li>
+                <li><a href="#contactsSection">Контакты</a></li>
+                <li><a href="#employeesSection">Сотрудники</a></li>
+                <li><a href="#contactsSection">Офис</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section id="heroSection">
+    <!-- Контейнер с фоновым изображением -->
+    <div id="heroCover">
+        <!-- Полупрозрачный оверлей для затемнения фона -->
+        <div id="heroOverlay"></div>
+        <!-- Контейнер с текстом, выравнивание слева -->
+        <div id="heroContent">
+            <h1>Современный подход к карьере</h1>
+            <p>
+                Мы доводим дела до результата.<br>
+                Ваш успех — наша цель.<br>
+                Сказано, сделано, перевыполнено.
+            </p>
+            <a href="#" onclick="openPopup()">Оставить заявку</a>
+        </div>
+    </div>
+</section>
+<!-- Блок "Этапы работы" -->
+<section id="stepsSection">
+    <h2>Этапы работы</h2>
+    <ul id="stepsList">
+        <li>
+            <div class="stepNumber">1</div>
+            <div class="stepText">
+                <h3>Связь с менеджером</h3>
+                <p>
+                    Клиент может найти нас через сайт, объявления или рекламные каналы и обратиться, оставив заявку, написав сообщение или позвонив менеджеру.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="stepNumber">2</div>
+            <div class="stepText">
+                <h3>Процесс работы</h3>
+                <p>
+                    Чаще всего клиенты обращаются с запросом: "Хочу получить рабочую визу, разобраться в процессе и найти подходящую вакансию". Мы эффективно решаем задачи и успешно помогаем нашим клиентам.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="stepNumber">3</div>
+            <div class="stepText">
+                <h3>Результат</h3>
+                <p>
+                    Мы стремимся выполнить задачи клиента, помочь ему приблизиться к своей цели и трудоустроиться на высокооплачиваемую работу. При расторжении договора гарантируем возврат средств.
+                </p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<!-- Блок "О нас" -->
+<!-- Блок "О нас" -->
+<section id="aboutSection">
+    <div id="aboutCover">
+        <!-- Оверлей для затемнения фона -->
+        <div id="aboutOverlay"></div>
+        <!-- Контейнер с текстом "О нас" -->
+        <div id="aboutContent">
+            <h2>О нас</h2>
+            <p><strong>START RECRUITMENT GROUP</strong> — Ваш надежный старт в Великобритании.</p>
+            <p>
+                Мы — команда профессионалов, которая помогает найти легальную, стабильную и достойно оплачиваемую работу в Великобритании.
+                Работаем с надежными работодателями и сопровождаем кандидатов на всех этапах — от подбора вакансии до выхода на работу.
+            </p>
+            <p><strong>Почему выбирают именно нас?</strong></p>
+            <ul>
+                <li>Прямые контракты с британскими работодателями</li>
+                <li>Полное сопровождение — от оформления документов до адаптации на месте</li>
+                <li>Честность и прозрачность — никаких скрытых платежей</li>
+                <li>Опыт более 5 лет на рынке международного трудоустройства</li>
+                <li>Индивидуальный подход к каждому кандидату</li>
+            </ul>
+            <p>
+                <strong>START RECRUITMENT GROUP</strong> — когда важно начать правильно.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- Блок "Услуги" -->
+<section id="servicesSection">
+    <h2>Наши услуги</h2>
+    <div id="servicesCards">
+        <div class="serviceCard">
+            <div class="serviceImage" style="background-image: url('img/i.webp');"></div>
+            <div class="serviceInfo">
+                <h3>Приглашение на работу от работодателя</h3>
+                <p>£250</p>
+                <button onclick="openPopup()">Подробнее</button>
+            </div>
+        </div>
+        <div class="serviceCard">
+            <div class="serviceImage" style="background-image: url('img/0x0.webp');"></div>
+            <div class="serviceInfo">
+                <h3>Консультация по вакансии и оптимальный поиск работодателя нашими менеджерами</h3>
+                <p>Бесплатно    <span class="card__oldprice">£50</span></p>
+                <button onclick="openPopup()">Подробнее</button>
+            </div>
+        </div>
+        <div class="serviceCard">
+            <div class="serviceImage"style="background-image: url('img/45.webp');"></div>
+            <div class="serviceInfo">
+                <h3>Оформление визы Tier-5</h3>
+                <p>£298</p>
+                <button onclick="openPopup()">Подробнее</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Блок "Наши сотрудники" -->
+<section id="employeesSection">
+    <h2>Наши сотрудники</h2>
+    <!-- Новый текст между заголовком и карточками сотрудников -->
+    <p class="employees-description">
+        Команда START RECRUITMENT GROUP — это высококвалифицированные специалисты, которые помогают людям находить легальную и стабильную работу в Великобритании.
+    </p>
+    <div id="employeesContainer">
+        <!-- Карточки сотрудников будут добавляться через JS -->
+    </div>
+</section>
+
+<!-- Блок "Почему выбирают START RECRUITMENT GROUP?" -->
+<section id="reasonsSection">
+    <h2>Почему выбирают именно START RECRUITMENT GROUP?</h2>
+    <ul id="reasonsList">
+        <li class="reason-item">
+            <img src="img/contract.svg" alt="Контракт">
+            <div class="reason-text">
+                <strong>Прямое сотрудничество с работодателями в Великобритании</strong>
+                <p>Работаем только с проверенными компаниями, без посредников. Гарантируем легальное трудоустройство, прозрачные условия и стабильную оплату труда.</p>
+            </div>
+        </li>
+        <li class="reason-item">
+            <img src="img/arrow-guide.svg" alt="Сопровождение">
+            <div class="reason-text">
+                <strong>Полное сопровождение на всех этапах</strong>
+                <p>От первого обращения до выхода на работу – мы с вами. Помогаем с резюме, собеседованиями, оформлением визы и сбором документов.</p>
+            </div>
+        </li>
+        <li class="reason-item">
+            <img src="img/scale.svg" alt="Честность">
+            <div class="reason-text">
+                <strong>Честность и прозрачные условия</strong>
+                <p>Все условия прописываются заранее. Вы точно знаете, за что платите и что получаете.</p>
+            </div>
+        </li>
+        <li class="reason-item">
+            <img src="img/briefcase.svg" alt="Опыт">
+            <div class="reason-text">
+                <strong>Опыт и профессионализм</strong>
+                <p>Более 5 лет опыта в трудоустройстве за границей. Знаем нюансы рынка, визовой системы и можем быстро решать нестандартные ситуации.</p>
+            </div>
+        </li>
+        <li class="reason-item">
+            <img src="img/shield-check.svg" alt="Безопасность">
+            <div class="reason-text">
+                <strong>Юридическая безопасность</strong>
+                <p>Работаем официально и предоставляем все необходимые документы. Вас не ждёт "работа в серую" или нарушение визового режима.</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<!-- Блок "Контакты" -->
+<section id="contactsSection">
+    <div class="contact-container">
+        <!-- Блок с контактной информацией -->
+        <div id="contactInfo">
+            <h2>Свяжитесь с нами</h2>
+            <ul>
+                <li>
+                    <img src="img/phone.svg" alt="Телефон">
+                    <a href="tel:+447922152574">+44 7922 152574</a>
+                </li>
+                <li>
+                    <img src="img/mail.svg" alt="Email">
+                    <a href="mailto:startrecruitmentgroup@gmail.com">startrecruitmentgroup@gmail.com</a>
+                </li>
+                <li>
+                    <img src="img/file.svg" alt="Лицензия">
+                    <a href="img/companies_house_document.pdf" target="_blank" rel="noopener">Скачать лицензию (PDF)</a>
+                </li>
+            </ul>
+            <a href="mailto:startrecruitmentgroup@gmail.com" class="contact-button">Написать нам</a>
+        </div>
+        <!-- Блок с картой -->
+        <div id="contactMap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527.870316309524!2d0.5318598157477203!3d51.3730745796111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df3347b387c5b7%3A0x7c9396e2e8b91e72!2s1-3%20Manor%20Rd%2C%20Chatham%20ME4%206AE%2C%20UK!5e0!3m2!1sen!2sno!4v1712764310300!5m2!1sen!2sno"
+                    width="100%" frameborder="0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+<!-- Футер -->
+<footer id="siteFooter">
+    <p>&copy; All Rights Reserved. <strong>START RECRUITMENT GROUP</strong>.</p>
+</footer>
+<script src="js/reasons.js"></script>
+<script src="js/about.js"></script>
+<script src="js/hero.js"></script>
+
+<script src="js/header.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
